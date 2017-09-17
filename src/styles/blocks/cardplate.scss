@@ -1,4 +1,6 @@
 .cardplate {
+  max-width: 1420px;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -8,7 +10,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex;
+  justify-content: center;
 }
 
 .cardplate__item {

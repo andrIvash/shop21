@@ -1,4 +1,3 @@
-
 // ---------------------------------------- init ---------------------------------------//
 const gulp = require('gulp');
 const webpack = require('webpack');
@@ -90,12 +89,13 @@ gulp.task('copy.fonts', function() {
 
 // ---------------------------------------- watch ---------------------------------------//
 gulp.task('watch', function() {
-  gulp.watch('./src/scripts/**/*.js', gulp.series('webpack')).on('change', browserSync.reload);
+  gulp.watch('./src/scripts/**/*.js', gulp.series('webpack'));
   gulp.watch('./src/styles/**/*.scss', gulp.series('css'));
-  gulp.watch('./src/templates/**/*.pug', gulp.series('pug')).on('change', browserSync.reload);
+  gulp.watch('./src/templates/**/*.pug', gulp.series('pug'));
+  gulp.watch('./build/*.html').on('change', browserSync.reload);
+  gulp.watch('./build/**/*.js').on('change', browserSync.reload);
 });
 
-gulp.watch('app/*.html').on('change', browserSync.reload);
 
 // ---------------------------------------- server ---------------------------------------//
 gulp.task('serve', function() {
@@ -107,7 +107,7 @@ gulp.task('serve', function() {
 
   });
 
-  // browserSync.watch(['./build' + '/**/*.*', '!**/*.css'], browserSync.reload);
+  // browserSync.watch(['./build' + '/**/*.*', '!./**/*.css'], browserSync.reload);
 });
 
 // ----------------------------------- css vendor -------------------------------------//
@@ -118,7 +118,7 @@ gulp.task('css.vendor', function() {
   ])
     .pipe(concatCss('vendor.css'))
     .pipe(csso())
-    .pipe(gulp.dest('./build/assets/styles'))
+    .pipe(gulp.dest('./build/assets/styles'));
 });
 
 // ---------------------------------------- clean ---------------------------------------//
@@ -189,7 +189,7 @@ gulp.task('sprite:png', function() {
   var spriteData = gulp.src('./src/images/png-sprites/*.png')
     .pipe(spritesmith({
       imgName: 'sprite.png',
-      cssName: 'sprite.scss',
+      cssName: 'sprite-png.scss',
       cssFormat: 'scss',
       // retinaSrcFilter: ['images/png-sprites/*@2x.png'],
       // retinaImgName: 'sprite@2x.png',
