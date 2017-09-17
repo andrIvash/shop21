@@ -1,0 +1,6 @@
+- var items = [['Мужчинам', '/'],	['Женщинам', '/'], ['Детям', '/'], ['Для дома', '/']];
+.select
+  ul.top-menu
+    each item, index in items
+      li.top-menu__elem
+        a(href=`${item[1]}` class='top-menu__link' + ((index == 0) ? ' active' : '' ))= item[0]

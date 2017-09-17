@@ -1,0 +1,42 @@
+.footer
+  .footer__top
+    .container
+      .footer__top-left
+        .footer__block
+          .footer__title О магазине
+          ul.footer__list
+            each item in [['Акции', '/'], ['Доставка и оплата', '/'], ['Качетсво и отзывы', '/'], ['FAQ', '/'], ['Контакты', '/'], ['Документы', '/']]
+              li.footer__item
+                a.footer__link(href=`${item[1]}`)= item[0]
+        .footer__block
+          .footer__title Личные данные
+          ul.footer__list
+            each item in [['Профиль', '/'], ['Мои заказы', '/'], ['Войти', '/']]
+              li.footer__item
+                a.footer__link(href=`${item[1]}`)= item[0]
+        .footer__block
+          .footer__title Художнику
+          ul.footer__list  
+            each item in [['Условия', '/'], ['Личный кабинет', '/']]
+              li.footer__item
+                a.footer__link(href=`${item[1]}`)= item[0]
+      .footer__top-right
+        .footer__title Подписаться на рассылку
+        .footer__desq Индивидуальная подборка для Вас, каждую неделю по пятницам. Легко отписаться
+        form.footer__form
+          input.footer__input
+          button.footer__btn(type="submit")  
+  .footer__bottom
+    .container
+      .footer__bottom-left
+        .footer__title Способы оплаты
+        .footer__payment
+      .footer__bottom-right
+        .footer__title Мы в социальных сетях
+        ul.socials.footer__socials
+          li.socials__item
+            a.socials__link.socials__link_vk(href="/") vk
+          li.socials__item
+            a.socials__link.socials__link_fb(href="/") fb
+          li.socials__item
+            a.socials__link.socials__link_insta(href="/") instagram   

@@ -1,0 +1,129 @@
+.footer {
+  background-color: #fff;
+  padding-top: 30px;
+
+  .footer__title {
+    color: #132136;
+    font-family: CirceRoundedBold;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__top-right {
+  flex: 1 1 467px;
+  margin-left: 40px;
+
+  .footer__title {
+    margin-bottom: 40px;
+  }
+}
+
+.footer__top-left {
+  flex: 1 1 680px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.footer__item {
+  margin-bottom: 10px; 
+}
+
+.footer__link {
+  color: #132136;
+  font-family: CirceRounded;
+  font-size: 24px;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer__desq {
+  color: #6a6a86;
+  font-family: CirceRounded;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.footer__bottom {
+  background-color: #f0f3f5;
+  padding: 30px 0;
+  
+
+  .container {
+    justify-content: space-around;
+  }
+}
+
+.footer__bottom-left {
+  flex: 1 1 70%;
+}
+
+.footer__bottom-right {
+  flex: 1 1 30%;
+}
+
+.footer__payment {
+  max-width: 622px;
+  width: 100%;
+  max-height: 59px;
+  height: 100%;
+
+  @include url('paysystem.png');
+
+}
+
+.footer__form {
+  display: flex;
+}
+
+.footer__input {
+  width: 340px;
+  height: 60px;
+  border: 2px solid #e7ebef;
+  border: 1px dotted #e1e1e1;
+  background-color: #ffffff;
+  padding: 0 20px;
+  color: #bbc0c8;
+  font-family: CirceRounded;
+  font-size: 18px;
+}
+
+.footer__btn {
+  display: inline-block;
+  width: 130px;
+  height: 60px;
+  background-color: #bbc0c8;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 23px;
+    height: 16px;
+    transform: translate(-11px, -8px);
+
+    @include sprite($s-aright);
+  }
+}

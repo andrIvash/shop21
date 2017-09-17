@@ -1,2 +1,30 @@
 main.main 
-  h1 #{data.cdn} 
+  section.cardline
+    .container
+      .cardline__title Животные 
+      .cardline__top
+        include ../blocks/_submenu
+        a.cardline__morelink(href="/") Показать еще
+      ul.cardline__list
+        each val in [1, 2, 3, 4, 5, 6]
+          li.cardline__item
+            include ../blocks/_productcard
+  section.cardline
+    .container
+      .cardline__title Мемчики
+      .cardline__top.cardline__top_menu_false
+        a.cardline__morelink(href="/") Показать еще
+      ul.cardline__list
+        each val in [1, 2, 3, 4, 5, 6]
+          li.cardline__item
+            include ../blocks/_productcard
+  a.main-btn.main__btn(href="/")
+    span.main-btn__sign
+    span.main-btn__text Все коллекции
+  section.cardplate
+    ul.cardplate__list
+        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+          li.cardplate__item
+            include ../blocks/_productcard
+  a.main-btn.main__btn(href="/")
+    span.main-btn__text Показать еще       

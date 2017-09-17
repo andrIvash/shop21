@@ -1,0 +1,46 @@
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .socials__item {
+    margin-left: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .socials__link_vk {
+    width: 70px;
+    height: 40px;
+
+    @include sprite($s-vk);
+  }
+
+  .socials__link_fb {
+    width: 29px;
+    height: 55px;
+
+    @include sprite($s-fb);
+  }
+
+  .socials__link_insta {
+    width: 55px;
+    height: 55px;
+
+    @include sprite($s-insta);
+  }
+
+  .socials__link {
+    display: block;
+    text-decoration: none;
+    font-size: 0;
+
+    &:active,
+    &:hover {
+    }
+  }
+}

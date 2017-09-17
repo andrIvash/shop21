@@ -1,0 +1,32 @@
+.main-btn {
+  width: 424px;
+  height: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbc0c8;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  &:active,
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(187, 192, 200, 0.59);
+  }
+}
+
+.main-btn__sign {
+  width: 16px;
+  height: 16px !important;
+
+  @include sprite($s-star);
+}
+
+.main-btn__text {
+  color: #fff;
+  font-family: CirceRounded;
+  font-size: 18px;
+  margin-left: 10px;
+}

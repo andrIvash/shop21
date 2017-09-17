@@ -1,0 +1,82 @@
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 340px;
+}
+
+.actions__elem {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.actions__link {
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000031;
+  font-family: CirceRounded;
+  font-size: 18px;
+
+
+  &:active,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.action__img {
+  margin-bottom: 15px;
+}
+
+.action__caption {
+  text-align: center;
+}
+
+.action__img_person {
+  @include sprite($s-user);
+}
+
+.action__img_pack {
+  @include sprite($s-package);
+
+  height: 34px;
+}
+
+.action__img_bag {
+  @include sprite($s-bag);
+
+  position: relative;
+}
+
+.action__count {
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  height: 27px;
+  width: 27px;
+  top: -20px;
+  right: -20px;
+
+  @include url('sign.svg');
+}
+
+.action__count-value {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  color: #fff;
+  font-family: CirceRounded;
+  font-size: 13px;
+  text-align: center;
+}

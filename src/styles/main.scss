@@ -3,32 +3,50 @@
 @import 'common/sprite';
 
 body {
-  position: relative;
-  background-color: #ecf0f1;
+
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .wrapper {
   min-height: 100vh;
   //min-width: 320px;
   width: 100%;
-  min-width: 1300px;
-  background-color:green;
   position: relative;
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1420px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 0 5px;
 }
 
 .section {
    //min-height: 100vh;
 }
 
-
-
+.main {
+  background-color: #f0f3f5;
+  padding-bottom: 10px;
+}
 
 @import 'blocks/content';
+@import 'blocks/header';
+@import 'blocks/top-menu';
+@import 'blocks/adv';
+@import 'blocks/search';
+@import 'blocks/logo';
+@import 'blocks/actions';
+@import 'blocks/select';
+@import 'blocks/menu';
+@import 'blocks/hero';
+@import 'blocks/cardline';
+@import 'blocks/submenu';
+@import 'blocks/productcard';
+@import 'blocks/main-btn';
+@import 'blocks/cardplate';
+@import 'blocks/footer';
+@import 'blocks/socials';

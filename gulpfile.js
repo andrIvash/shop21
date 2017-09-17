@@ -113,7 +113,8 @@ gulp.task('serve', function() {
 // ----------------------------------- css vendor -------------------------------------//
 gulp.task('css.vendor', function() {
   return gulp.src([
-    './node_modules/normalize.css/normalize.css'
+    './node_modules/normalize.css/normalize.css',
+    './src/styles/jquery.bxslider.css'
   ])
     .pipe(concatCss('vendor.css'))
     .pipe(csso())

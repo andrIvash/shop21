@@ -1,0 +1,38 @@
+.cardplate {
+  margin-bottom: 20px;
+}
+
+.cardplate__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex;
+}
+
+.cardplate__item {
+  margin: 20px 10px;
+
+  .productcard {
+    width: 335px;
+    height: 446px;
+
+    .productcard__img-wrap {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px
+    }
+
+    .productcard__title,
+    .productcard__desq,
+    .productcard__value {
+      font-size: 20px;
+    }
+
+    .productcard__curr svg {
+      height: 14px;
+      width: 17px;
+    }
+  }
+}

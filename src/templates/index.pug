@@ -1,7 +1,32 @@
 extends _main-layout
+
+block header
+    .header
+        .header__top
+            .container
+                .header__top-menu
+                    include blocks/_top-menu
+                .header__top-adv
+                    include blocks/_adv
+        .header__content
+            .container
+                include blocks/_search
+                include blocks/_logo
+                include blocks/_actions
+        .header__select
+            .container
+                include blocks/_select
+        .header__menu
+            .container
+                include blocks/_menu
           
 block content
+    include blocks/_hero
     include common/_main
+
+block footer
+    include common/_footer
+        
     
 
              

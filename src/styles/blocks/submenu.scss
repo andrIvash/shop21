@@ -1,0 +1,36 @@
+.submenu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.submenu__elem {
+  margin-left: 20px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.submenu__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 138px;
+  height: 55px;
+  color: #000031;
+  font-family: CirceRounded;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(52, 70, 74, 0.29);
+  background-color: #fff;
+  border-radius: 25px;
+
+  &:active,
+  &:hover {
+    background-color: #b8bac3;
+    color: #fff;
+  }
+}

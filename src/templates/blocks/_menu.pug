@@ -1,0 +1,33 @@
+- var items = [['Футболки', '/', '1167'],	['Майки', '/', '1167'], ['Лонгсливы', '/', '1167'], ['Регланы', '/', '1167']]; 
+  ul.menu
+    li.menu__elem.menu__elem_sales
+      a.menu__link(href="/") Скидки
+      .menu__sales 50%
+    each item, index in items
+      li.menu__elem
+        a.menu__link(href=`${item[1]}`)
+          .menu__img
+          .menu__data
+            .menu__elem-title= item[0]
+            .menu__elem-val= item[2]
+              .menu__elem-svg
+                svg
+                  use(xlink:href='assets/img/sprite/sprite.svg#ruble')
+    li.menu__elem.menu__elem_more
+      a.menu__link(href="/") Eще
+      .menu__title Все товары
+        ul.innermenu.menu__list
+          li.innermenu__item
+            a.innermenu__link(href="/") Товар 1
+          li.innermenu__item
+            a.innermenu__link(href="/") Товар 2  
+    li.menu__elem.menu__elem_category
+      svg
+        use(xlink:href='assets/img/sprite/sprite.svg#list')
+      a.menu__link(href="/") Категории
+      .menu__title Все Категории
+        ul.innermenu.menu__list
+          li.innermenu__item
+            a.innermenu__link(href="/") Товар 1
+          li.innermenu__item
+            a.innermenu__link(href="/") Товар 2       

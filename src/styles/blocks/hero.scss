@@ -1,0 +1,32 @@
+.hero {
+  //height: 311px;
+  width: 100%;
+  background-color: #f0f3f5;
+  overflow: hidden;
+
+  .bx-wrapper {
+    box-shadow: none;
+    border: 0;
+    margin-bottom: 50px;
+    background-color: #f0f3f5;
+  }
+}
+
+.hero__img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.bx-wrapper .bx-pager {
+  bottom: 17px;
+
+  .bx-pager-link {
+    background: #fff !important;
+  }
+
+  .bx-pager-link.active,
+  .bx-pager-link:hover {
+    background: #e50002 !important;
+  }
+}

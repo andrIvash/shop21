@@ -1,0 +1,195 @@
+.menu,
+.innermenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu__elem {
+  margin-left: 40px;
+  position: relative;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.menu__elem_sales {
+  padding-right: 30px;
+  border-right: 2px solid #e7ebef;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -25px;
+    width: 21px;
+    height: 21px;
+
+    @include sprite($s-percent);
+  }
+}
+
+.menu__elem_more {
+  padding-left: 40px;
+  border-left: 2px solid #e7ebef;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    width: 21px;
+    height: 21px;
+
+    @include sprite($s-heart);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: -25px;
+    width: 21px;
+    height: 21px;
+
+    @include sprite($s-arrowd);
+  }
+}
+
+.menu__elem_category {
+  margin-left: 50px;
+
+  svg {
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -24px;
+    width: 21px;
+    height: 21px;
+    fill: #d4d5dc;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: -25px;
+    width: 21px;
+    height: 21px;
+
+    @include sprite($s-arrowd);
+  }
+}
+
+.menu__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000031;
+  font-family: CirceRounded;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 8px;
+
+  &:active,
+  &:hover {
+
+  }
+}
+
+.menu__elem-title {
+  font-family: CirceRoundedBold;
+}
+
+.menu__elem-svg {
+  display: inline-block;
+
+  svg {
+    height: 12px;
+    width: 14px;
+    fill: #132136;
+  }
+
+}
+
+.menu__img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-color: #f0f3f5;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 37px;
+    height: 4px;
+    top: 15px;
+    left: 19px;
+
+    @include sprite($s-shirt);
+  }
+
+}
+
+.menu__data {
+  margin-left: 10px;
+}
+
+.menu__sales,
+.menu__title {
+  color: #afb8c7;
+}
+
+.innermenu {
+  width: 100px;
+  background-color: #fff;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  font-size: 14px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.menu__title {
+  cursor: pointer;
+  position: relative;
+
+  &:hover > .innermenu {
+    display: block;
+  }
+}
+
+.innermenu__item {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.innermenu__link {
+  display: block;
+  color: #000031;
+  font-family: CirceRounded;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    color: rgba(0, 0, 49, 0.43);
+  }
+}

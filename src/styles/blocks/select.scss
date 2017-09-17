@@ -1,0 +1,37 @@
+.select {
+
+  .top-menu {
+    justify-content: center;
+    padding-bottom: 10px;
+    min-height: 63px;
+  }
+
+  .top-menu__link {
+    font-size: 18px;
+    position: relative;
+
+    &:active,
+    &:hover,
+    &.active {
+      color: #000031;
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 130%;
+        height: 10px;
+        left: -10px;
+        bottom: -13px;
+        background-color: #26d9ff;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .top-menu__elem {
+    display: flex;
+    align-items: center;
+    margin-left: 115px;
+  }
+}

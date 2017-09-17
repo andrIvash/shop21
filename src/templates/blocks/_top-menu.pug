@@ -1,0 +1,5 @@
+- var items = [['Качество', '/'],	['Оплата и доставка', '/'], ['Отзывы', '/']];
+ul.top-menu
+  each item in items
+    li.top-menu__elem
+      a.top-menu__link(href=`${item[1]}`)= item[0]

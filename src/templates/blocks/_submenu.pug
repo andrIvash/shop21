@@ -1,0 +1,5 @@
+- var items = [['Все', '/'],	['Кошка', '/'], ['Лев', '/'], ['Медведь', '/'], ['Акула', '/']];
+ul.submenu
+  each item in items
+    li.submenu__elem
+      a.submenu__link(href=`${item[1]}`)= item[0]
